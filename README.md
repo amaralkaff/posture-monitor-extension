@@ -44,19 +44,19 @@ Monitor your sitting posture and get smart alerts to improve ergonomics. All pro
 ## Development
 
 ### Prerequisites
-- Node.js 14+
+- Bun 1.0+ (or Node.js 14+)
 - Firefox 91+
 
 ### Setup
 ```bash
-npm install
+bun install
 ```
 
 ### Testing
 ```bash
-npm test                 # Run all tests
-npm run test:coverage    # With coverage report
-npm run test:watch       # Watch mode
+bun test                 # Run all tests
+bun run test:coverage    # With coverage report
+bun run test:watch       # Watch mode
 ```
 
 ### Build
