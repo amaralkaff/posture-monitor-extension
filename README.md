@@ -18,21 +18,37 @@ Monitor your sitting posture and get smart alerts to improve ergonomics. All pro
 
 ### Installation
 
-1. Download this extension:
-   ```bash
-   git clone https://github.com/amaralkaff/posture-monitor-extension.git
-   cd posture-monitor-extension
-   ```
+**Windows:**
+```powershell
+# Install Bun (if not installed)
+powershell -c "irm bun.sh/install.ps1|iex"
 
-2. Load in Firefox:
-   - Open Firefox
-   - Go to `about:debugging#/runtime/this-firefox`
-   - Click **Load Temporary Add-on**
-   - Select `manifest.json`
+# Clone repository
+git clone https://github.com/amaralkaff/posture-monitor-extension.git
+cd posture-monitor-extension
 
-3. Grant camera permission when prompted
+# Install dependencies
+bun install
+```
 
-4. Click extension icon and press **Start Monitoring**
+**Linux/macOS:**
+```bash
+# Clone repository
+git clone https://github.com/amaralkaff/posture-monitor-extension.git
+cd posture-monitor-extension
+
+# Install dependencies
+bun install
+```
+
+### Load in Firefox
+
+1. Open Firefox
+2. Go to `about:debugging#/runtime/this-firefox`
+3. Click **Load Temporary Add-on**
+4. Select `manifest.json` from the cloned directory
+5. Grant camera permission when prompted
+6. Click extension icon and press **Start Monitoring**
 
 ### Usage
 
@@ -60,8 +76,24 @@ bun run test:watch       # Watch mode
 ```
 
 ### Build
+
+**Windows (PowerShell):**
+```powershell
+.\build.ps1              # Creates .xpi package
+```
+
+**Linux/macOS:**
 ```bash
 ./build.sh              # Creates .xpi package
+```
+
+**Manual build (any OS):**
+```bash
+# Using bun/npm scripts
+bun run build           # Runs build.sh on Linux/macOS
+
+# Or manually with zip
+zip -r posture-monitor-v1.0.0.xpi manifest.json src/ assets/ icons/ -x "*.git*"
 ```
 
 ## How It Works
@@ -124,6 +156,7 @@ Extension
 
 ## Documentation
 
+- [Windows Installation Guide](WINDOWS.md) - Complete guide for Windows users
 - [Product Requirements Document](docs/PRD.md)
 - [Test-Driven Development Plan](docs/TDD.md)
 
