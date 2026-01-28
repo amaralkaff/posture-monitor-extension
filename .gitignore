@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Testing
+coverage/
+test-output.txt
+*.log
+
+# Build artifacts
+build_temp/
+*.xpi
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+create-icons.js

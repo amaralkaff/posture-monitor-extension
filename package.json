@@ -1,0 +1,68 @@
+{
+  "name": "posture-monitor",
+  "version": "1.0.0",
+  "description": "Privacy-first real-time posture monitoring browser extension",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:integration": "jest --testMatch='**/tests/integration/**/*.test.js'",
+    "test:e2e": "jest --testMatch='**/tests/e2e/**/*.test.js'",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "dev": "web-ext run --source-dir=.",
+    "build": "./build.sh",
+    "sign": "web-ext sign --source-dir=."
+  },
+  "keywords": [
+    "posture",
+    "health",
+    "ergonomics",
+    "pose-detection",
+    "tensorflow",
+    "privacy",
+    "firefox-extension"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@jest/globals": "^30.2.0",
+    "babel-jest": "^29.7.0",
+    "canvas": "^3.2.1",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "jsdom": "^27.4.0",
+    "web-ext": "^7.8.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "webextensions": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "no-console": "off"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/posture-monitor"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/posture-monitor/issues"
+  }
+}
